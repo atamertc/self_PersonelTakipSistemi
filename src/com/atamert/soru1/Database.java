@@ -331,7 +331,7 @@ public class Database {
         System.out.format(format, "DEPARTMAN ADI", "DEPARTMAN GENEL MUDURU", "DEPARTMAN MUDURU");
         System.out.println("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾");
         for (Departman d : sorumluDepartmanlar) {
-            System.out.format(format, d.getDepartmanAdi(), d.getGenelMudur().getAd() + " " + d.getGenelMudur().getSoyad(), d.getMudur().getAd() + " " + d.getMudur().getSoyad());
+            System.out.format(format, d.getDepartmanAdi(), d.getGenelMudur(), d.getMudur());
         }
     }
 
