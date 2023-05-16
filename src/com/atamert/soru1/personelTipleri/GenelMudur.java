@@ -3,6 +3,7 @@ package com.atamert.soru1.personelTipleri;
 import com.atamert.soru1.Database;
 import com.atamert.soru1.Departman;
 import com.atamert.soru1.Personel;
+import com.atamert.soru1.exceptions.GenelMudurAtamaException;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -65,8 +66,11 @@ public class GenelMudur extends Personel {
                                 " isimli Genel Mudure -> Teknik Hizmetler Departmani atandi");
                         Database.teknikHizmetlerDepartmani.setGenelMudur(this);
                     } else {
-                        System.out.println(Database.teknikHizmetlerDepartmani.getDepartmanAdi() +
-                                " zaten bir Genel Mudure sahip!");
+                        try {
+                            throw new GenelMudurAtamaException();
+                        } catch (GenelMudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 2 -> {
@@ -76,8 +80,11 @@ public class GenelMudur extends Personel {
                                 " isimli Genel Mudure -> Insan Kaynaklari Departmani atandi");
                         Database.insanKaynaklariDepartmani.setGenelMudur(this);
                     } else {
-                        System.out.println(Database.insanKaynaklariDepartmani.getDepartmanAdi() +
-                                " zaten bir Genel Mudure sahip!");
+                        try {
+                            throw new GenelMudurAtamaException();
+                        } catch (GenelMudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 3 -> {
@@ -87,8 +94,11 @@ public class GenelMudur extends Personel {
                                 " isimli Genel Mudure -> Uretim Departmani atandi");
                         Database.uretimDepartmani.setGenelMudur(this);
                     } else {
-                        System.out.println(Database.uretimDepartmani.getDepartmanAdi() +
-                                " zaten bir Genel Mudure sahip!");
+                        try {
+                            throw new GenelMudurAtamaException();
+                        } catch (GenelMudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 4 -> {
@@ -98,8 +108,11 @@ public class GenelMudur extends Personel {
                                 " isimli Genel Mudure -> Satin Alma Departmani atandi");
                         Database.satinAlmaDepartmani.setGenelMudur(this);
                     } else {
-                        System.out.println(Database.satinAlmaDepartmani.getDepartmanAdi() +
-                                " zaten bir Genel Mudure sahip!");
+                        try {
+                            throw new GenelMudurAtamaException();
+                        } catch (GenelMudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 5 -> {
@@ -109,8 +122,11 @@ public class GenelMudur extends Personel {
                                 " isimli Genel Mudure -> Mali Isler Departmani atandi");
                         Database.maliIslerDepartmani.setGenelMudur(this);
                     } else {
-                        System.out.println(Database.maliIslerDepartmani.getDepartmanAdi() +
-                                " zaten bir Genel Mudure sahip!");
+                        try {
+                            throw new GenelMudurAtamaException();
+                        } catch (GenelMudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }

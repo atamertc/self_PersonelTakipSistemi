@@ -3,6 +3,8 @@ package com.atamert.soru1.personelTipleri;
 import com.atamert.soru1.Database;
 import com.atamert.soru1.Departman;
 import com.atamert.soru1.Personel;
+import com.atamert.soru1.exceptions.GenelMudurAtamaException;
+import com.atamert.soru1.exceptions.MudurAtamaException;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -53,7 +55,11 @@ public class Mudur extends Personel {
                                 " isimli Mudure -> Teknik Hizmetler Departmani atandi");
                         sorumluDepartman.setMudur(this);
                     } else {
-                        System.out.println("Bu departmanin zaten bir Muduru var!");
+                        try {
+                            throw new MudurAtamaException();
+                        } catch (MudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 2 -> {
@@ -63,7 +69,11 @@ public class Mudur extends Personel {
                                 " isimli Mudure -> Insan Kaynaklari Departmani atandi");
                         sorumluDepartman.setMudur(this);
                     } else {
-                        System.out.println("Bu departmanin zaten bir Muduru var!");
+                        try {
+                            throw new MudurAtamaException();
+                        } catch (MudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 3 -> {
@@ -73,7 +83,11 @@ public class Mudur extends Personel {
                                 " isimli Mudure -> Uretim Departmani atandi");
                         sorumluDepartman.setMudur(this);
                     } else {
-                        System.out.println("Bu departmanin zaten bir Muduru var!");
+                        try {
+                            throw new MudurAtamaException();
+                        } catch (MudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 4 -> {
@@ -83,7 +97,11 @@ public class Mudur extends Personel {
                                 " isimli Mudure -> Satin Alma Departmani atandi");
                         sorumluDepartman.setMudur(this);
                     } else {
-                        System.out.println("Bu departmanin zaten bir Muduru var!");
+                        try {
+                            throw new MudurAtamaException();
+                        } catch (MudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 case 5 -> {
@@ -93,7 +111,11 @@ public class Mudur extends Personel {
                                 " isimli Mudure -> Mali Isler Departmani atandi");
                         sorumluDepartman.setMudur(this);
                     } else {
-                        System.out.println("Bu departmanin zaten bir Muduru var!");
+                        try {
+                            throw new MudurAtamaException();
+                        } catch (MudurAtamaException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }

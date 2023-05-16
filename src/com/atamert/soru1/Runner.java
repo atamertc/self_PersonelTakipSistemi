@@ -65,9 +65,10 @@ public class Runner {
 
 
 
-
         //Yukaridaki personellerin girisleri yapildiktan sonra burasi calisacaktir
         Uygulama.personelTakipSistemi();
+
+
 
 
     }
